@@ -1,0 +1,17 @@
+{
+  "name": "linkstester",
+  "version": "1.0.0",
+  "description": "Projeto que verifica se os links presente em um arquivo html estão funcionando, projeto é uma modificação do projeto visto no curso da Alura Node.js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "links": "node ./src/cli.js",
+    "links:valida": "node ./src/cli.js ./arquivos/ --valida"
+  },
+  "author": "Jonathan-Fernandes-Costa",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "5.0.1"
+  }
+}
