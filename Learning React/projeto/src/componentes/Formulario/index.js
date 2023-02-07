@@ -5,7 +5,7 @@ import Lista from '../Lista'
 import './Formulario.css'
 const Formulario = (props) => {
     const parentescos = [
-        'Pai/Mãe', 'Tio(a)', 'Primo(a)', 'Irmão', 'Avó', 'Amigo(a)', 'Amigo da Faculdade', 'Outro'
+        'Pai/Mãe','Primo(a)' , 'Tio(a)', 'Amigo(a)', 'Amigo da Faculdade', 'Outro'
     ]
     const [nome, setNome] = useState('')//Controlando os estados, o primeiro item da lista
     const [local, setLocal] = useState('')//é responsavel por guardar o valor e o segundo
