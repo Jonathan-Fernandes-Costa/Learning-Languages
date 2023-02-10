@@ -23,31 +23,38 @@ function App() {
     },
     {
       nome: 'Amigos',
-      corP: '#E06B69',
-      corS: '#FDE7E8',
+      corP: '#FFBA05',
+      corS: '#FFF5D9',
     },
     {
       nome: 'Amigos da Faculdade',
-      corP: '#DB6EBF',
-      corS: '#FAE9F5',
+      corP: '#FF8A29',
+      corS: '#FFEEDF',
     },
     {
-      nome: 'Outro',
-      corP: '#FFBA05',
-      corS: '#FFF5D9',
+      nome: 'Outros',
+      corP: '#E06B69',
+      corS: '#FDE7E8',
     }
   ]
   const [membros, setMembro] = useState([])
 
-  const newMembro = (membro) =>{
+  const newMembro = (membro) => {
     console.log(membro)
-    setMembro([...membros], membro)
+    setMembro([...membros, membro])
   }
+
   return (
     <div className="App">
-      <Banner/>
-      <Formulario aoMembroCadastrada={membro => newMembro(membro)}/>
-      {membrosinfos.map(membroinfo => <Membros key={membroinfo.nome} nome={membroinfo.nome} corP={membroinfo.corP} corS={membroinfo.corS}/>)}
+      <Banner />
+      <Formulario parentesco={membrosinfos.map(parente => parente.nome)} aoMembroCadastrada={membro => newMembro(membro)} />
+      {membrosinfos.map(membroinfo => <Membros
+        key={membroinfo.nome}
+        nome={membroinfo.nome}
+        corP={membroinfo.corP}
+        corS={membroinfo.corS}
+        membros={membros.filter(m => m.parentesco === membroinfo.nome)}
+      />)}
 
     </div>
   );

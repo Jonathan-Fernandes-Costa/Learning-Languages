@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, {useState} from 'react'
 import Botao from '../Botão'
 import CampoTexto from '../CampoTexto'
 import Lista from '../Lista'
@@ -15,16 +15,20 @@ const Formulario = (props) => {
     const aoSalvar = (evento) => {
         evento.preventDefault()
         props.aoMembroCadastrada({
-            nome: nome,
-            local: local,
-            foto: foto,
-            parentesco: parentesco
+            nome,
+            local,
+            foto,
+            parentesco
         })
+        setNome('')
+        setLocal('')
+        setFoto('')
+        setParentesco('')
     }
     return (
         <section className='formulario'>
             <form onSubmit={aoSalvar}>
-                <h2>Preencha os dados para criar o card de familiar</h2>
+                <h2>Preencha os dados para criar o card de membro</h2>
                 <CampoTexto
                     obrigatorio={true}
                     label="Nome"
