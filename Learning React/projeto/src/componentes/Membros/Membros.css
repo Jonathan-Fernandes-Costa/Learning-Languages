@@ -8,7 +8,7 @@
     display: inline-block;
     padding-bottom: 8px;
 }
-.membros .membro {
+.membros .cadamembro {
     display: flex;
     justify-content: space-around;
     margin-top: 32px;

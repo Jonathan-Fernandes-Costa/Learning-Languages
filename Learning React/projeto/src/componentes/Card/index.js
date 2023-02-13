@@ -1,5 +1,5 @@
 import './Card.css'
-const Card = ({nome, foto, local}) =>{
+const Card = ({nome, foto, local}) =>{//forma diferente de usar props
     return(<div className='membro'>
         <div className='cabecalho'>
             <img src={foto} alt={nome}/>

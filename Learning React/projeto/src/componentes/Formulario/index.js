@@ -4,14 +4,10 @@ import CampoTexto from '../CampoTexto'
 import Lista from '../Lista'
 import './Formulario.css'
 const Formulario = (props) => {
-    const parentescos = [
-        'Pai/Mãe','Primo(a)' , 'Tio(a)', 'Amigo(a)', 'Amigo da Faculdade', 'Outro'
-    ]
     const [nome, setNome] = useState('')//Controlando os estados, o primeiro item da lista
     const [local, setLocal] = useState('')//é responsavel por guardar o valor e o segundo
     const [foto, setFoto] = useState('')//que é uma função, é responsável por atribuir um valor
     const [parentesco, setParentesco] = useState('')
-
     const aoSalvar = (evento) => {
         evento.preventDefault()
         props.aoMembroCadastrada({
@@ -52,8 +48,9 @@ const Formulario = (props) => {
                 />
 
                 <Lista
+                    obrigatorio={true}
                     label='Parentesco' 
-                    itens={parentescos}
+                    itens={props.times}
                     valor={parentesco} 
                     aoAlterado={valor => setParentesco(valor)} 
                  />
