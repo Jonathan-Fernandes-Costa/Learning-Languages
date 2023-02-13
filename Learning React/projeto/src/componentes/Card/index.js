@@ -1,7 +1,7 @@
 import './Card.css'
-const Card = ({nome, foto, local}) =>{//forma diferente de usar props
+const Card = ({nome, foto, local, corDeFundo}) =>{//forma diferente de usar props
     return(<div className='membro'>
-        <div className='cabecalho'>
+        <div className='cabecalho' style={{backgroundColor: corDeFundo}}>
             <img src={foto} alt={nome}/>
         </div>
         <div className='rodape'>

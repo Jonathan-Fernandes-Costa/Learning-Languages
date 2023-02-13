@@ -8,7 +8,7 @@ const Membros = (props) =>{
         (props.membros.length > 0) ? <section className='membros' style={cssCorS}>
             <h3 style={cssCorP}>{props.nome}</h3>
             <div className='cadamembro'>
-            {props.membros.map(membro => <Card key={membro.nome} nome={membro.nome} foto={membro.foto} local={membro.local} parentesco={membro.parentesco}/>)}
+            {props.membros.map(membro => <Card corDeFundo={props.corP} key={membro.nome} nome={membro.nome} foto={membro.foto} local={membro.local} parentesco={membro.parentesco}/>)}
             </div>
             
         </section>

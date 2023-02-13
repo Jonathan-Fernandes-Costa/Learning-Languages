@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Membros from './componentes/Membros';
+import Rodape from './componentes/Rodape';
 
 
 function App() {
@@ -40,7 +41,6 @@ function App() {
   const [membros, setMembro] = useState([])
 
   const newMembro = (membro) => {
-    console.log(membro)
     setMembro([...membros, membro])
   }
 
@@ -57,6 +57,7 @@ function App() {
         membros={membros.filter(m => m.parentesco === time.nome)}
       />)}
 
+      <Rodape/>
     </div>
   );
 }
