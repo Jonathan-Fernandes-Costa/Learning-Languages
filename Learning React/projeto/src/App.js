@@ -41,6 +41,7 @@ function App() {
   const [membros, setMembro] = useState([])
 
   const newMembro = (membro) => {
+    //debugger => serve para parar o fluxo do código, muito útil para concertar bugs
     setMembro([...membros, membro])
   }
 
