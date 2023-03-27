@@ -1,0 +1,23 @@
+.membros{
+    text-align: center;
+    padding: 32px;
+    position: relative;
+}
+.membros h3{
+    font-size: 32px;
+    border-bottom: 4px solid;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+.membros .cadamembro {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.membros .input-cor{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+}

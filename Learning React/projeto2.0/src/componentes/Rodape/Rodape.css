@@ -1,0 +1,56 @@
+/* src/componentes/Rodape/index.js */
+
+.footer {
+    background: #6278F7;
+    color: #FFF;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin-right: 32px;
+}
+
+.footer ul li:last-child {
+    margin-right: 0;
+}
+
+/*Meu codigo do desafio*/
+/*footer {
+    background-image: url('../../../public/imagens/fundo.png');
+    max-width: 100%;
+    background-color: #6278F7;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+footer .redes {
+    color: #FFFFFF;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 50px;
+}
+footer .redes img{
+    padding: 15px;
+}
+footer .logo{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+footer .credito {
+    display: flex;
+   justify-content: flex-end;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    align-items: center;
+    text-align: right;
+
+    color: #FFFFFF;
+}*/
