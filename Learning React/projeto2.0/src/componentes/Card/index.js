@@ -1,6 +1,7 @@
 import {AiFillCloseCircle} from 'react-icons/ai'//importando o icone da biblioteca REact icons
 import './Card.css'
 const Card = ({nome, foto, local, corDeFundo, aoDeletar}) =>{//forma diferente de usar props
+
     return(<div className='membro'>
         <AiFillCloseCircle size={25} className='deletar' onClick={aoDeletar}/>
         <div className='cabecalho' style={{backgroundColor: corDeFundo}}>

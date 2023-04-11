@@ -9,33 +9,27 @@ function App() {
   const [times, setTimes] = useState([
     {
       nome: 'Família',
-      corP: '#57C278',
-      corS: '#D9F7E9'
+      cor: '#D9F7E9'
     },
     {
       nome: 'Primos',
-      corP: '#82CFFA',
-      corS: '#E8F8FF'
+      cor: '#E8F8FF'
     },
     {
       nome: 'Tios',
-      corP: '#A6D157',
-      corS: '#F0F8E2'
+      cor: '#F0F8E2'
     },
     {
       nome: 'Amigos',
-      corP: '#FFBA05',
-      corS: '#FFF5D9'
+      cor: '#FFF5D9'
     },
     {
       nome: 'Amigos da Faculdade',
-      corP: '#FF8A29',
-      corS: '#FFEEDF'
+      cor: '#FFEEDF'
     },
     {
       nome: 'Outros',
-      corP: '#E06B69',
-      corS: '#FDE7E8'
+      cor: '#FDE7E8'
     }
   ])
 
@@ -54,7 +48,7 @@ function App() {
   const mudarCorDoTime = (cor, nome) => {
     setTimes(times.map(time => {
       if (time.nome === nome) {
-        time.corS = cor;
+        time.cor = cor;
       }
       return time
     }))
@@ -67,11 +61,11 @@ function App() {
       <Header />
       <Formulario times={times.map(time => time.nome)} aoMembroCadastrada={membro => newMembro(membro)} />
       <section className='times'>
-        {times.map(time => <Membros
+        {times.map(time => 
+          <Membros
           key={time.nome}
           nome={time.nome}
-          corP={time.corP}
-          corS={time.corS}
+          cor={time.cor}
           membros={membros.filter(m => m.parentesco === time.nome)}
           aoDeletar={deletarMembro}
           mudarCor={mudarCorDoTime}

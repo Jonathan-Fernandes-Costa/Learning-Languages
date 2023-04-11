@@ -41,6 +41,7 @@ const Formulario = (props) => {
                     aoAlterado={valor => setLocal(valor)}
                 />
                 <CampoTexto
+                    obrigatorio={true}
                     label="Foto"
                     placeholder="Digite o endereço da imagem"
                     valor={foto}
