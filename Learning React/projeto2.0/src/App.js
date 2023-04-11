@@ -24,7 +24,7 @@ function App() {
       cor: '#FFF5D9'
     },
     {
-      nome: 'Amigos da Faculdade',
+      nome: 'Amigos Corporativos',
       cor: '#FFEEDF'
     },
     {
@@ -61,12 +61,12 @@ function App() {
       <Header />
       <Formulario times={times.map(time => time.nome)} aoMembroCadastrada={membro => newMembro(membro)} />
       <section className='times'>
-        {times.map(time => 
+        {times.map((time, indice)=> 
           <Membros
-          key={time.nome}
+          key={indice}
           nome={time.nome}
           cor={time.cor}
-          membros={membros.filter(m => m.parentesco === time.nome)}
+          membros={membros.filter(membro => membro.parentesco === time.nome)}
           aoDeletar={deletarMembro}
           mudarCor={mudarCorDoTime}
         />)}
