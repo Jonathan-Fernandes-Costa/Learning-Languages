@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Membros from './componentes/Membros';
 import Rodape from './componentes/Rodape';
+import Header from './componentes/Header';
 
 
 function App() {
@@ -47,13 +47,13 @@ function App() {
     setMembro([...membros, membro])
   }
 
-  const deletarMembro = () =>{
+  const deletarMembro = () => {
     console.log('Deletando')
   }
 
   const mudarCorDoTime = (cor, nome) => {
     setTimes(times.map(time => {
-      if(time.nome === nome){
+      if (time.nome === nome) {
         time.corS = cor;
       }
       return time
@@ -63,20 +63,21 @@ function App() {
 
   return (
     <div className="App">
-     
-      <Banner />
-      <Formulario times={times.map(time => time.nome)} aoMembroCadastrada={membro => newMembro(membro)} />
-      {times.map(time => <Membros
-        key={time.nome}
-        nome={time.nome}
-        corP={time.corP}
-        corS={time.corS}
-        membros={membros.filter(m => m.parentesco === time.nome)}
-        aoDeletar={deletarMembro}
-        mudarCor={mudarCorDoTime}
-      />)}
 
-      <Rodape/>
+      <Header />
+      <Formulario times={times.map(time => time.nome)} aoMembroCadastrada={membro => newMembro(membro)} />
+      <section className='times'>
+        {times.map(time => <Membros
+          key={time.nome}
+          nome={time.nome}
+          corP={time.corP}
+          corS={time.corS}
+          membros={membros.filter(m => m.parentesco === time.nome)}
+          aoDeletar={deletarMembro}
+          mudarCor={mudarCorDoTime}
+        />)}
+      </section>
+      <Rodape />
     </div>
   );
 }

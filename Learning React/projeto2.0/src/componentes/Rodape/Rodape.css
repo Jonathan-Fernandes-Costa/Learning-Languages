@@ -17,6 +17,13 @@
 .footer ul li:last-child {
     margin-right: 0;
 }
+.footer h1{
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    padding: 15px;
+    border: white solid 1px;
+    border-radius: 25%;
+}
 
 /*Meu codigo do desafio*/
 /*footer {

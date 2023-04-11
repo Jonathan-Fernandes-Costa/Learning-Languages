@@ -2,6 +2,7 @@
     text-align: center;
     padding: 32px;
     position: relative;
+    background-image: url("/public/imagens/fundo.png");
 }
 .membros h3{
     font-size: 32px;

@@ -24,11 +24,11 @@ const Rodape = () => {
             </ul>
         </section>
         <section>
-            <img src="/imagens/logo.png" alt="" />
+            <h1 className='logo'>My social cycle</h1>
         </section>
         <section>
             <p>
-                Desenvolvido por Jonathan, utilizando o modelo da Alura.
+                Desenvolvido por Jonathan Fernandes
             </p>
         </section>
     </footer>)
