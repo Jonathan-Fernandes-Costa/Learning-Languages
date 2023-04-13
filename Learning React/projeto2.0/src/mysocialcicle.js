@@ -195,7 +195,7 @@ const inicial = [{
     id: uuidv4(),
     favorito:false,
     nome:'Raimunda Fernandes',
-    desc:'raifernandes2712',
+    desc:'@raifernandes2712',
     foto:'imagens/raimunda.png',
     afinidade:'Tios'
 },
@@ -275,7 +275,7 @@ const inicial = [{
     id: uuidv4(),
     favorito:false,
     nome:'Pedro Onayquem',
-    desc:'Nikezin',
+    desc:'@i_pedroo',
     foto:'imagens/nike.png',
     afinidade:'Amigos'
 },

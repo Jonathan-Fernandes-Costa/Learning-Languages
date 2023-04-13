@@ -1,4 +1,4 @@
-.botao {
+.botao{
     background-color: #6278F7;
     border-radius: 10px;
     font-weight: 700;
@@ -11,4 +11,9 @@
 }
 .botao:hover {
     background-color: #95ffd4;
+}
+.botao-topo{
+    display: flex;
+    margin: 20px auto;
+    margin-top: 60px;
 }

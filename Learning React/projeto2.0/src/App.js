@@ -5,6 +5,7 @@ import Rodape from './componentes/Rodape';
 import Header from './componentes/Header';
 import { v4 as uuidv4 } from 'uuid';
 import inicial from './mysocialcicle'
+import Botao from './componentes/Botão';
 function App() {
   const [afinidade, setAfinidade] = useState([
     {
@@ -69,11 +70,16 @@ function App() {
     }
     ))
   }
+  const apagarMembrosIniciais = () =>{
+    setMembro(membros.filter(membro => membro.id === 3))
+    console.log("teste")
+  }
 
   return (
     <div className="App">
 
       <Header />
+      <Botao apagar={apagarMembrosIniciais} tipo="topo" texto="Iniciar Criação"/>
       <Formulario
         cadastrarAfinidade={newAfinidade}
         afinidades={afinidade.map(afinidade => afinidade.nome)}
