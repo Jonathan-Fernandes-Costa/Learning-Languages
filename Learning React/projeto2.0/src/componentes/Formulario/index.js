@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Botao from '../Botão'
-import CampoTexto from '../CampoTexto'
+import Campo from '../Campo'
 import Lista from '../Lista'
 import './Formulario.css'
 const Formulario = (props) => {
@@ -8,6 +8,18 @@ const Formulario = (props) => {
     const [local, setLocal] = useState('')//é responsavel por guardar o valor e o segundo
     const [foto, setFoto] = useState('')//que é uma função, é responsável por atribuir um valor
     const [parentesco, setParentesco] = useState('')
+    const [nomeTime, setNomeTime] = useState('')
+    const [corTime, setCorTime] = useState('')
+
+    const aoSalvarTime = (evento) =>{
+        evento.preventDefault()
+        props.cadastrarTime({
+            nome : nomeTime,
+            cor: corTime
+        })
+        setNomeTime('')
+        setCorTime('')
+    }
     const aoSalvar = (evento) => {
         evento.preventDefault()
         props.aoMembroCadastrada({
@@ -25,7 +37,7 @@ const Formulario = (props) => {
         <section className='formulario'>
             <form onSubmit={aoSalvar}>
                 <h2>Preencha os dados para criar o card de membro</h2>
-                <CampoTexto
+                <Campo
                     obrigatorio={true}
                     label="Nome"
                     placeholder="Digite seu nome"
@@ -33,14 +45,14 @@ const Formulario = (props) => {
                     aoAlterado={valor => setNome(valor)}
                 />
 
-                <CampoTexto
+                <Campo
                     obrigatorio={true}
                     label="Localização"
                     placeholder="Digite de onde você é"
                     valor={local}
                     aoAlterado={valor => setLocal(valor)}
                 />
-                <CampoTexto
+                <Campo
                     obrigatorio={true}
                     label="Foto"
                     placeholder="Digite o endereço da imagem"
@@ -50,14 +62,32 @@ const Formulario = (props) => {
 
                 <Lista
                     obrigatorio={true}
-                    label='Parentesco' 
+                    label='Afinidade' 
                     itens={props.times}
                     valor={parentesco} 
                     aoAlterado={valor => setParentesco(valor)} 
                  />
-                <Botao texto="Criar Card">
-                    Criar Card
-                </Botao>
+                <Botao texto="Criar Card"/>
+            </form>
+            <form onSubmit={aoSalvarTime}>
+                <h2>Preencha os dados para criar uma nova afinidade</h2>
+                <Campo
+                    obrigatorio={true}
+                    label="Nome"
+                    placeholder="Digite o nome da afinidade"
+                    valor={nomeTime}
+                    aoAlterado={valor => setNomeTime(valor)}
+                />
+
+                <Campo
+                    tipo="color"
+                    obrigatorio={true}
+                    label="Cor"
+                    placeholder="Digite a cor"
+                    valor={corTime}
+                    aoAlterado={valor => setCorTime(valor)}
+                />
+                <Botao texto="Criar time" />
             </form>
         </section>
     )
