@@ -3,7 +3,7 @@ import './Membros.css'
 import hexToRgba from 'hex-to-rgba';
 const Membros = (props) =>{
     const cssCorP = {borderColor: props.cor}
-    const cssCorS = {backgroundColor: hexToRgba(props.cor, 0.6)}
+    const cssCorS = {backgroundColor: hexToRgba(props.cor, 0.4)}
     return(
         (props.membros.length > 0) ? <section className='membros' style={cssCorS}>
             <input value={props.cor} type='color' onChange={evento => props.mudarCor(evento.target.value, props.id)} className='input-cor'/>

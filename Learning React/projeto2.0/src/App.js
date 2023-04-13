@@ -29,7 +29,7 @@ function App() {
     },
     {
       id: uuidv4(),
-      nome: 'Amigos Corporativos',
+      nome: 'Amigos de Trabalho',
       cor: '#FFEEDF'
     },
     {

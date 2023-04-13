@@ -34,27 +34,286 @@ const inicial = [{
 {
     id: uuidv4(),
     favorito:false,
-    nome:'',
-    desc:'',
-    foto:'',
-    afinidade:''
+    nome:'Larissa Fernandes',
+    desc:'@_claralarissa',
+    foto:"imagens/larissa.png",
+    afinidade:'Primos'
 },
 {
     id: uuidv4(),
     favorito:false,
-    nome:'',
-    desc:'',
-    foto:'',
-    afinidade:''
+    nome:'Yasmin Fernandes',
+    desc:'@yasminf.aguiar',
+    foto:'imagens/yasmin.png',
+    afinidade:'Primos'
 },
 {
     id: uuidv4(),
     favorito:false,
-    nome:'',
-    desc:'',
-    foto:'',
-    afinidade:''
+    nome:'Gabriel Fernandes',
+    desc:'@gabrielfernands._',
+    foto:'imagens/gabriel.png',
+    afinidade:'Primos'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Isabele Fernandes',
+    desc:'@isabellyfernandes__',
+    foto:'imagens/isabele.png',
+    afinidade:'Primos'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'João Fernandes',
+    desc:'Joãozinho',
+    foto:'imagens/joão.png',
+    afinidade:'Primos'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Maysa Fernandes',
+    desc:'_maysa.fernandes',
+    foto:'imagens/maysa.png',
+    afinidade:'Primos'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Fernando Fernandes',
+    desc:'Fernandin',
+    foto:'imagens/fernando.png',
+    afinidade:'Primos'
+},
+{
+    id: uuidv4(),
+    favorito:true,
+    nome:'Jonathan Fernandes',
+    desc:'Eu',
+    foto:'imagens/jonathan.png',
+    afinidade:'Família'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Rafael Fernandes',
+    desc:'@rafael_f_aguiar',
+    foto:'imagens/rafael.png',
+    afinidade:'Primos'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Sabrina Fernandes',
+    desc:'@sabrina__fernandes___',
+    foto:'imagens/sabrina.png',
+    afinidade:'Primos'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Anderson',
+    desc:'@andersonfernandes940',
+    foto:'imagens/anderson.png',
+    afinidade:'Primos'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Janderso Ribeiro',
+    desc:'@jandersoribeirofernandes',
+    foto:'imagens/janderson.png',
+    afinidade:'Primos'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Mirian Ribeiro',
+    desc:'@mirianribeiroed',
+    foto:'imagens/mirian.png',
+    afinidade:'Primos'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Vinicius Fernandes',
+    desc:'@viniciusfd2170',
+    foto:'imagens/vinicius.png',
+    afinidade:'Primos'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Lucas Fernandes',
+    desc:'@lucas_fernandes_21',
+    foto:'imagens/lucas.png',
+    afinidade:'Primos'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Wisley Lima',
+    desc:'@_wisleylima_',
+    foto:'imagens/wisley.png',
+    afinidade:'Primos'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Rosa Fernandes',
+    desc:'@rosa_fernandesaguiar',
+    foto:'imagens/rosa.png',
+    afinidade:'Tios'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Batista',
+    desc:'Tio Batista',
+    foto:'imagens/batista.png',
+    afinidade:'Tios'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Maria Fernandes',
+    desc:'@maria_da_conceicao_1310',
+    foto:'imagens/marioa.png',
+    afinidade:'Tios'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Raquel Fernandes',
+    desc:'@kelfernandes',
+    foto:'imagens/raquel.png',
+    afinidade:'Primos'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Raimunda Fernandes',
+    desc:'raifernandes2712',
+    foto:'imagens/raimunda.png',
+    afinidade:'Tios'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Neuma Fernandes',
+    desc:'Tia Neuma',
+    foto:'imagens/neuma.png',
+    afinidade:'Tios'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Carlos Fernandes',
+    desc:'@carlos_gomesoficial',
+    foto:'imagens/carlos.png',
+    afinidade:'Tios'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Darley Fernandes',
+    desc:'@darleyfernandes_',
+    foto:'imagens/darley.png',
+    afinidade:'Primos'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Felipe Sousa',
+    desc:'@felipe.sousa366',
+    foto:'imagens/felipesousa.png',
+    afinidade:'Amigos'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Arthur Jardel',
+    desc:'@_ar_turj',
+    foto:'imagens/arthur.png',
+    afinidade:'Amigos de Trabalho'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Wesley Mesquita',
+    desc:'@wesley_mesqt',
+    foto:'imagens/wesley.png',
+    afinidade:'Amigos de Trabalho'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Ryan Gomes Magalhães Lima',
+    desc:'@lryan_gomesl',
+    foto:'imagens/ryan.png',
+    afinidade:'Amigos de Trabalho'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Vanderlei Furtuna',
+    desc:'@vander_suncat',
+    foto:'imagens/vanderlei.png',
+    afinidade:'Amigos de Trabalho'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Personas Group',
+    desc:'Grupo de amigos da Faculdade',
+    foto:'imagens/personas.png',
+    afinidade:'Amigos de Trabalho'
+},
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'Pedro Onayquem',
+    desc:'Nikezin',
+    foto:'imagens/nike.png',
+    afinidade:'Amigos'
 },
 ]
-
+/* 
+{
+    id: uuidv4(),
+    favorito:false,
+    nome:'',
+    desc:'',
+    foto:'',
+    afinidade:''
+},
+nome: 'Família',
+      cor: '#D9F7E9'
+    },
+    {
+      id: uuidv4(),
+      nome: 'Primos',
+      cor: '#E8F8FF'
+    },
+    {
+      id: uuidv4(),
+      nome: 'Tios',
+      cor: '#F0F8E2'
+    },
+    {
+      id: uuidv4(),
+      nome: 'Amigos',
+      cor: '#FFF5D9'
+    },
+    {
+      id: uuidv4(),
+      nome: 'Amigos Corporativos',
+      cor: '#FFEEDF'
+    },
+    {
+      id: uuidv4(),
+      nome: 'Outros',
+      cor: '#FDE7E8'*/
 export default inicial;
