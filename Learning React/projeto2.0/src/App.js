@@ -44,7 +44,7 @@ function App() {
 
   const newMembro = (membro) => {
     //debugger => serve para parar o fluxo do código, muito útil para concertar bugs
-    setMembro([...membros, membro])
+    setMembro([...membros, {...membro, id: uuidv4()}])
   }
   const deletarMembro = (prop) => {
     setMembro(membros.filter(membro => membro.id !== prop))
@@ -87,7 +87,7 @@ function App() {
             id={time.id}
             nome={time.nome}
             cor={time.cor}
-            membros={membros.filter(membro => membro.parentesco === time.nome)}
+            membros={membros.filter(membro => membro.afinidade === time.nome)}
             aoDeletar={deletarMembro}
             mudarCor={mudarCorDoTime}
             aoFavoritar={favoritar}

@@ -10,14 +10,15 @@ const Membros = (props) =>{
             <h3 style={cssCorP}>{props.nome}</h3>
             <div className='cadamembro'>
             {props.membros.map((membro, indice) => {
+                
                 return (<Card 
                             corDeFundo={props.cor} 
                             id={membro.id} 
                             key={indice} 
                             nome={membro.nome} 
                             foto={membro.foto} 
-                            local={membro.local} 
-                            parentesco={membro.parentesco} 
+                            desc={membro.desc} 
+                            afinidade={membro.afinidade} 
                             aoDeletar={props.aoDeletar}
                             favorito={membro.favorito}
                             aoFavoritar={props.aoFavoritar}

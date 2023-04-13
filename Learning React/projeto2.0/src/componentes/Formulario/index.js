@@ -5,9 +5,9 @@ import Lista from '../Lista'
 import './Formulario.css'
 const Formulario = (props) => {
     const [nome, setNome] = useState('')//Controlando os estados, o primeiro item da lista
-    const [local, setLocal] = useState('')//é responsavel por guardar o valor e o segundo
+    const [desc, setDesc] = useState('')//é responsavel por guardar o valor e o segundo
     const [foto, setFoto] = useState('')//que é uma função, é responsável por atribuir um valor
-    const [parentesco, setParentesco] = useState('')
+    const [afinidade, setAfinidade] = useState('')
     const [nomeTime, setNomeTime] = useState('')
     const [corTime, setCorTime] = useState('')
 
@@ -24,14 +24,14 @@ const Formulario = (props) => {
         evento.preventDefault()
         props.aoMembroCadastrada({
             nome,
-            local,
+            desc,
             foto,
-            parentesco
+            afinidade
         })
         setNome('')
-        setLocal('')
+        setDesc('')
         setFoto('')
-        setParentesco('')
+        setAfinidade('')
     }
     return (
         <section className='formulario'>
@@ -47,10 +47,10 @@ const Formulario = (props) => {
 
                 <Campo
                     obrigatorio={true}
-                    label="Localização"
-                    placeholder="Digite de onde você é"
-                    valor={local}
-                    aoAlterado={valor => setLocal(valor)}
+                    label="Descrição"
+                    placeholder="Digite a descrição do membro"
+                    valor={desc}
+                    aoAlterado={valor => setDesc(valor)}
                 />
                 <Campo
                     obrigatorio={true}
@@ -64,8 +64,8 @@ const Formulario = (props) => {
                     obrigatorio={true}
                     label='Afinidade' 
                     itens={props.times}
-                    valor={parentesco} 
-                    aoAlterado={valor => setParentesco(valor)} 
+                    valor={afinidade} 
+                    aoAlterado={valor => setAfinidade(valor)} 
                  />
                 <Botao texto="Criar Card"/>
             </form>

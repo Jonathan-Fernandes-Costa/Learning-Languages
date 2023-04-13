@@ -1,6 +1,6 @@
 import {AiFillCloseCircle, AiFillHeart, AiOutlineHeart} from 'react-icons/ai'//importando o icone da biblioteca REact icons
 import './Card.css'
-const Card = ({ id ,nome, foto, local, corDeFundo, aoDeletar, favorito, aoFavoritar}) =>{//forma diferente de usar props
+const Card = ({ id ,nome, foto, desc, corDeFundo, aoDeletar, favorito, aoFavoritar}) =>{//forma diferente de usar props
     function favoritar(){
         aoFavoritar(id)
     }
@@ -16,7 +16,7 @@ const Card = ({ id ,nome, foto, local, corDeFundo, aoDeletar, favorito, aoFavori
         </div>
         <div className='rodape'>
             <h4>{nome}</h4>
-            <h5>{local}</h5>
+            <h5>{desc}</h5>
             <div className='favoritar'>
                 {favorito 
                 ? <AiFillHeart size={25} color='red' onClick={favoritar}/>
