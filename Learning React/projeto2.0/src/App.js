@@ -4,9 +4,9 @@ import Membros from './componentes/Membros';
 import Rodape from './componentes/Rodape';
 import Header from './componentes/Header';
 import { v4 as uuidv4 } from 'uuid';
-
+import inicial from './mysocialcicle'
 function App() {
-  const [times, setTimes] = useState([
+  const [afinidade, setAfinidade] = useState([
     {
       id: uuidv4(),
       nome: 'Família',
@@ -38,8 +38,8 @@ function App() {
       cor: '#FDE7E8'
     }
   ])
-
-  const [membros, setMembro] = useState([])
+  
+  const [membros, setMembro] = useState(inicial)
 
 
   const newMembro = (membro) => {
@@ -49,16 +49,16 @@ function App() {
   const deletarMembro = (prop) => {
     setMembro(membros.filter(membro => membro.id !== prop))
   }
-  const mudarCorDoTime = (cor, id) => {
-    setTimes(times.map(time => {
-      if (time.id === id) {
-        time.cor = cor;
+  const mudarCorAfinidade = (cor, id) => {
+    setAfinidade(afinidade.map(afinidade => {
+      if (afinidade.id === id) {
+        afinidade.cor = cor;
       }
-      return time
+      return afinidade
     }))
   }
-  const newTime = (Novotime) => {//criando a função que recebe um objeto time que possue cor e nome e adiciona a lista de times
-    setTimes([...times, { ...Novotime, id: uuidv4() }])
+  const newAfinidade = (Novoafinidade) => {//criando a função que recebe um objeto afinidade que possue cor e nome e adiciona a lista de afinidade
+    setAfinidade([...afinidade, { ...Novoafinidade, id: uuidv4() }])
   }
   const favoritar = (id) => {
     setMembro(membros.map(membro => {
@@ -75,21 +75,21 @@ function App() {
 
       <Header />
       <Formulario
-        cadastrarTime={newTime}
-        times={times.map(time => time.nome)}
+        cadastrarAfinidade={newAfinidade}
+        afinidades={afinidade.map(afinidade => afinidade.nome)}
         aoMembroCadastrada={membro =>
           newMembro(membro)}
       />
-      <section className='times'>
-        {times.map((time, indice) =>
+      <section className='afinidade'>
+        {afinidade.map((afinidade, indice) =>
           <Membros
             key={indice}
-            id={time.id}
-            nome={time.nome}
-            cor={time.cor}
-            membros={membros.filter(membro => membro.afinidade === time.nome)}
+            id={afinidade.id}
+            nome={afinidade.nome}
+            cor={afinidade.cor}
+            membros={membros.filter(membro => membro.afinidade === afinidade.nome)}
             aoDeletar={deletarMembro}
-            mudarCor={mudarCorDoTime}
+            mudarCor={mudarCorAfinidade}
             aoFavoritar={favoritar}
           />)}
       </section>

@@ -63,7 +63,7 @@ const Formulario = (props) => {
                 <Lista
                     obrigatorio={true}
                     label='Afinidade' 
-                    itens={props.times}
+                    itens={props.afinidades}
                     valor={afinidade} 
                     aoAlterado={valor => setAfinidade(valor)} 
                  />
@@ -87,7 +87,7 @@ const Formulario = (props) => {
                     valor={corTime}
                     aoAlterado={valor => setCorTime(valor)}
                 />
-                <Botao texto="Criar time" />
+                <Botao texto="Criar Afinidade" />
             </form>
         </section>
     )
