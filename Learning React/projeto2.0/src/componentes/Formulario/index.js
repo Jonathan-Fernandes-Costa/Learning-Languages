@@ -3,13 +3,25 @@ import Botao from '../Botão'
 import Campo from '../Campo'
 import Lista from '../Lista'
 import './Formulario.css'
+import CampoFile from '../CampoFile'
 const Formulario = (props) => {
     const [nome, setNome] = useState('')//Controlando os estados, o primeiro item da lista
     const [desc, setDesc] = useState('')//é responsavel por guardar o valor e o segundo
-    const [foto, setFoto] = useState('')//que é uma função, é responsável por atribuir um valor
+    //que é uma função, é responsável por atribuir um valor
     const [afinidade, setAfinidade] = useState('')
     const [nomeTime, setNomeTime] = useState('')
     const [corTime, setCorTime] = useState('')
+    const [imageUrl, setImageUrl] = useState('');
+
+    const handleImageSelect = (event) => {
+        const file = event.target.files[0];
+        const reader = new FileReader();
+        reader.onload = () => {
+            setImageUrl(reader.result);
+        };
+        reader.readAsDataURL(file);
+        
+    }
 
     const aoSalvarTime = (evento) =>{
         evento.preventDefault()
@@ -23,14 +35,14 @@ const Formulario = (props) => {
     const aoSalvar = (evento) => {
         evento.preventDefault()
         props.aoMembroCadastrada({
-            nome,
-            desc,
-            foto,
-            afinidade
+            nome: nome,
+            desc: desc,
+            imageUrl: imageUrl,
+            afinidade: afinidade
         })
         setNome('')
         setDesc('')
-        setFoto('')
+        setImageUrl('')
         setAfinidade('')
     }
     return (
@@ -52,14 +64,13 @@ const Formulario = (props) => {
                     valor={desc}
                     aoAlterado={valor => setDesc(valor)}
                 />
-                <Campo
+                <CampoFile 
                     obrigatorio={true}
-                    label="Foto"
-                    placeholder="Endereço da imagem"
-                    valor={foto}
-                    aoAlterado={valor => setFoto(valor)}
+                    label="Escolha sua Foto"
+                    valor={imageUrl}
+                    aoAlterado={handleImageSelect}
                 />
-
+                    
                 <Lista
                     obrigatorio={true}
                     label='Afinidade' 

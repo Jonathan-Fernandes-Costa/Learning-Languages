@@ -1,24 +1,36 @@
 //src/componentes/Rodape/index.js
-import {AiFillGithub, AiFillLinkedin, AiFillInstagram} from 'react-icons/ai'
+import { AiFillGithub, AiFillLinkedin, AiFillInstagram } from 'react-icons/ai'
 import './Rodape.css'
-
+import { useState } from 'react';
 const Rodape = () => {
+    const [isHoveredButton1, setIsHoveredButton1] = useState(false);
+    const [isHoveredButton2, setIsHoveredButton2] = useState(false);
+    const [isHoveredButton3, setIsHoveredButton3] = useState(false);
     return (<footer className="footer">
         <section>
             <ul>
                 <li>
                     <a href="https://github.com/Jonathan-Fernandes-Costa" target="_blank" rel="noopener noreferrer">
-                       <AiFillGithub size={35} color='white'/>
+                        <AiFillGithub style={{ color: isHoveredButton1 ? '#95ffd4' : 'white' }}
+                            onMouseEnter={() => setIsHoveredButton1(true)}
+                            onMouseLeave={() => setIsHoveredButton1(false)}
+                            size={35} />
                     </a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/jonathan-fernandes-81706b259/" target="_blank" rel="noopener noreferrer">
-                       <AiFillLinkedin size={35} color='white'/>
+                        <AiFillLinkedin style={{ color: isHoveredButton2 ? '#95ffd4' : 'white' }}
+                            onMouseEnter={() => setIsHoveredButton2(true)}
+                            onMouseLeave={() => setIsHoveredButton2(false)}
+                            size={35} />
                     </a>
                 </li>
                 <li>
                     <a href="https://www.instagram.com/jonathann.fernandes/" target="_blank" rel="noopener noreferrer">
-                        <AiFillInstagram size={35} color='white'/>
+                        <AiFillInstagram style={{ color: isHoveredButton3 ? '#95ffd4' : 'white' }}
+                            onMouseEnter={() => setIsHoveredButton3(true)}
+                            onMouseLeave={() => setIsHoveredButton3(false)}
+                            size={35} />
                     </a>
                 </li>
             </ul>

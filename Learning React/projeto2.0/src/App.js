@@ -72,14 +72,13 @@ function App() {
   }
   const apagarMembrosIniciais = () =>{
     setMembro(membros.filter(membro => membro.id === 3))
-    console.log("teste")
   }
 
   return (
     <div className="App">
 
       <Header />
-      <Botao apagar={apagarMembrosIniciais} tipo="topo" texto="Iniciar Criação"/>
+      <Botao apagar={apagarMembrosIniciais} tipo="topo" texto="Iniciar Criação/Apagar Membros"/>
       <Formulario
         cadastrarAfinidade={newAfinidade}
         afinidades={afinidade.map(afinidade => afinidade.nome)}
