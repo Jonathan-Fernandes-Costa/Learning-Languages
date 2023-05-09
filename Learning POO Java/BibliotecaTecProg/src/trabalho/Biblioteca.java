@@ -120,11 +120,14 @@ public class Biblioteca {
 			}
 		}
 	}
+	
 	public void consultaEmprestimos(int matricula) {
 		System.out.println("Publicações emprestadas: ");
 		for (int i = 0; i < listaEmprestimo.size(); i++) {
 			if(listaEmprestimo.get(i).getCliente().matricula == matricula) {
+				if(listaEmprestimo.get(i).getPublicacao().titulo != null) {
 				System.out.println(listaEmprestimo.get(i).getPublicacao().titulo);
+				}
 			}
 		}
 	}

@@ -15,7 +15,12 @@ public abstract class Publicacao {
 		this.autor = autor;
 		this.quantidadeDisponivel = quantidadeDisponivel;
 	}
-	
+	public void foiEmprestado() {
+		quantidadeDisponivel++;
+	}
+	public void foiDevolvido() {
+		quantidadeDisponivel--;
+	}
 	public boolean verificaDiponivel() {
 		if(quantidadeDisponivel>0) {
 			return true;

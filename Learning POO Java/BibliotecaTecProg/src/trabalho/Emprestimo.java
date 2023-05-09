@@ -6,11 +6,13 @@ public class Emprestimo {
 	private Publicacao publicacao;
 
 	public Emprestimo(Cliente cliente, Publicacao publicacao) {
-		if(cliente.verificaSePodeEmprestimo() && publicacao.verificaDiponivel()) {
+		if(cliente.verificaSePodeEmprestimo() && publicacao.verificaDiponivel() && cliente.validatps()) {
 			this.cliente = cliente;
 			this.publicacao = publicacao;
 			this.cliente.computaTp(publicacao);
 			this.cliente.historico.add(publicacao);
+			this.cliente.fezEmprestimo();
+			this.publicacao.foiEmprestado();
 			System.out.println("Emprestimo Realizado "+ cliente.tipo+":"+cliente.nome+" - "+publicacao.tipo+":"+publicacao.titulo+" Tem um total de "+cliente.verificarDias()+" dias");
 		}else {
 			System.out.println("Não foi Possivel fazer o Emprestimo");
