@@ -4,6 +4,7 @@ public class Bispo extends Robo{
 
 	public Bispo(int id, String nome, int posicaox, int posicaoy, Plano plano) {
 		super(id, nome, posicaox, posicaoy, plano);
+		
 		setPrint("B");
 	}
 

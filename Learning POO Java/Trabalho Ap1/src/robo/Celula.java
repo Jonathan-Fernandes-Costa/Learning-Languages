@@ -72,7 +72,7 @@ public class Celula {
 				return robos.get(i).getPrint();
 			}
 		}
-		return "*";
+		return " * ";
 	}
 
 	public int getAlunoEbug() {
