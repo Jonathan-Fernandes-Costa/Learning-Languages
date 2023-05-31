@@ -24,7 +24,7 @@ const Formulario = (props) => {
     }
 
     const aoSalvarTime = (evento) =>{
-        evento.preventDefault()
+        evento.preventDefault(//Função chamada quando um time for salvo
         props.cadastrarAfinidade({
             nome : nomeTime,
             cor: corTime
