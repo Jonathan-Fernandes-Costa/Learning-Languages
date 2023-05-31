@@ -9,7 +9,9 @@ public class Celula {
 	private int id;
 	private ArrayList<Robo> robos;	
 	private int alunoEbug;//aluno==1, bug==2;
+	private String print = " * ";
 	
+
 	public Celula(int id, int x , int y) {
 		robos = new ArrayList<Robo>();
 		posicaoX = x;
@@ -45,8 +47,9 @@ public class Celula {
 		return "Celula:  " + id + " x: " + posicaoX + " y: " + posicaoY;
 	}
 	public boolean verificaRobo() {
+		System.out.println(robos.size());
 		for (int i = 0; i < robos.size(); i++) {
-			if(robos.get(i)!=null) {
+			if(robos.get(i) != null) {
 				return true;
 			}
 		}
@@ -59,10 +62,10 @@ public class Celula {
 		return robos;
 	}
 
-	public void apagaRobo(int id) {
+	public void apagaRobo(Robo robo) {
 		for (int i = 0; i < robos.size(); i++) {
-			if(robos.get(i).getId() == id) {
-				robos.add(i, null);
+			if(robos.get(i) == robo) {
+				robos.set(i, null);
 			}
 		}
 	}
@@ -72,7 +75,7 @@ public class Celula {
 				return robos.get(i).getPrint();
 			}
 		}
-		return " * ";
+		return print;
 	}
 
 	public int getAlunoEbug() {
@@ -82,5 +85,7 @@ public class Celula {
 	public void setAlunoEbug(int alunoEbug) {
 		this.alunoEbug = alunoEbug;
 	}
-	
+	public void setPrint(String print) {
+		this.print = print;
+	}
 }

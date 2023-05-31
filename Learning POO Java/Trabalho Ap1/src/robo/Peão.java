@@ -8,16 +8,34 @@ public class Peão extends Robo{
 	}
 
 	public void avancar(int casas) {
-		tiraRobo();
-		setPosicaoy(getPosicaoy()+casas);
-		atualizaPosicao();
+		if(getPlano().getTamanhox() >= getPosicaox()+casas) {
+			if(casas==1) {
+				tiraRobo();
+				setPosicaoy(getPosicaoy()+casas);
+				atualizaPosicao();
+			}else {
+				System.out.println("Número de casas inválidas!");
+			}
+		}else {
+			System.out.println("Número de casas inválidas robô vai para fora do plano");
+		}
+		
 	}
 
 	
 	public void retroceder(int casas) {
-		tiraRobo();
-		setPosicaoy(getPosicaoy()-casas);
-		atualizaPosicao();
+		if(getPosicaoy()-casas>0) {
+			if(casas==1) {
+				tiraRobo();
+				setPosicaoy(getPosicaoy()-casas);
+				atualizaPosicao();
+				
+			}else {
+				System.out.println("Número de casas inválidas");
+			}
+		}else {
+			System.out.println("Número de casas inválidas robô vai para fora do plano");
+		}
 	}
 
 }

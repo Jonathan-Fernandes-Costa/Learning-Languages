@@ -10,15 +10,25 @@ public class Andador extends Robo{
 
 
 	public void avancar(int casas) {
-		tiraRobo();
-		setPosicaox(getPosicaox()-casas);
-		atualizaPosicao();
+		if(getPosicaox()-casas > 0) {
+			tiraRobo();
+			setPosicaox(getPosicaox()-casas);
+			atualizaPosicao();
+		}else {
+			System.out.println(" Número de casas inválidas robô vai para fora do plano ");
+		}
+		
 	}
 	
 	public void retroceder(int casas) {
-		tiraRobo();
-		setPosicaox(getPosicaox()+casas);
-		atualizaPosicao();
+		if(getPlano().getTamanhox() >= getPosicaox()+casas) {
+			tiraRobo();
+			setPosicaox(getPosicaox()+casas);
+			atualizaPosicao();
+		}else {
+			System.out.println(" Número de casas inválidas robô vai para fora do plano ");
+		}
+		
 	}
 
 }
