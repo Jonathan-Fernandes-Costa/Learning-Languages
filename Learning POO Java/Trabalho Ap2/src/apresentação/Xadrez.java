@@ -12,7 +12,7 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 import apresentação.eventos.AoClicar;
-import model.ArrayDeCasas;
+import controller.ArrayDeCasas;
 
 public class Xadrez extends JPanel {
 	private ArrayDeCasas casas;

@@ -13,8 +13,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import model.ArrayDeCasas;
-import model.GerenciaJogo;
+import controller.ArrayDeCasas;
+import controller.GerenciaJogo;
 
 public class JanelaPrincipal extends JFrame{
 	private GerenciaJogo jogo;

@@ -9,7 +9,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-import model.GerenciaJogo;
+import controller.GerenciaJogo;
 
 public class PainelRelatorio extends JPanel {
 	private GerenciaJogo jogo;

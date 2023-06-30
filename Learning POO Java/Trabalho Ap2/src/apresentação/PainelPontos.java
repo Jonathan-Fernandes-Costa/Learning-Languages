@@ -7,8 +7,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import model.Casa;
-import model.GerenciaJogo;
+import controller.Casa;
+import controller.GerenciaJogo;
 
 public class PainelPontos extends JPanel {
 	private JanelaPrincipal janela;

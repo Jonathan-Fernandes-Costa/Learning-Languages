@@ -7,7 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 import apresentação.PainelPontos;
-import model.GerenciaJogo;
+import controller.GerenciaJogo;
 
 public class AoVerificar implements ActionListener{
 	private GerenciaJogo jogo;

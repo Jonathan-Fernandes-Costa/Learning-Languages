@@ -5,7 +5,7 @@ import javax.swing.JTextField;
 
 import apresentação.eventos.AoJogar;
 import apresentação.eventos.AoSair;
-import model.GerenciaJogo;
+import controller.GerenciaJogo;
 
 import javax.swing.JLabel;
 

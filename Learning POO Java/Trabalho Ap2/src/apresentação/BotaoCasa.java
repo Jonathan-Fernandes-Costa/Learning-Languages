@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
-import model.Casa;
+import controller.Casa;
 
 public class BotaoCasa extends JButton{
 	private Casa casa;

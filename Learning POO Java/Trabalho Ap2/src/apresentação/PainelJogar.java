@@ -19,8 +19,8 @@ import javax.swing.table.DefaultTableModel;
 import apresentação.eventos.AoProximaRodada;
 import apresentação.eventos.AoSair;
 import apresentação.eventos.AoVerificar;
-import model.Casa;
-import model.GerenciaJogo;
+import controller.Casa;
+import controller.GerenciaJogo;
 
 public class PainelJogar extends JPanel {
 	private PainelPontos painelPontuacao;
