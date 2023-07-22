@@ -28,9 +28,9 @@ const Formulario = (props) => {
         props.cadastrarAfinidade({
             nome : nomeTime,
             cor: corTime
-        })
-        setNomeTime('')
-        setCorTime('')
+        }),
+        setNomeTime(''),
+        setCorTime(''))
     }
     const aoSalvar = (evento) => {
         evento.preventDefault()
@@ -66,7 +66,7 @@ const Formulario = (props) => {
                 />
                 <CampoFile 
                     obrigatorio={true}
-                    label="Escolha sua Foto"
+                    label="Escolha a Foto"
                     valor={imageUrl}
                     aoAlterado={handleImageSelect}
                 />

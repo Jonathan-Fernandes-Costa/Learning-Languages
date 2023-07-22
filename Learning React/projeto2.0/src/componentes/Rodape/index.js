@@ -11,10 +11,11 @@ const Rodape = () => {
             <ul>
                 <li>
                     <a href="https://github.com/Jonathan-Fernandes-Costa" target="_blank" rel="noopener noreferrer">
-                        <AiFillGithub style={{ color: isHoveredButton1 ? '#95ffd4' : 'white' }}
+                        <AiFillGithub 
+                            style={{ color: isHoveredButton1 ? '#95ffd4' : 'white'}}
                             onMouseEnter={() => setIsHoveredButton1(true)}
                             onMouseLeave={() => setIsHoveredButton1(false)}
-                            size={35} />
+                            size={isHoveredButton1 ? 45 : 35} />
                     </a>
                 </li>
                 <li>
@@ -22,7 +23,7 @@ const Rodape = () => {
                         <AiFillLinkedin style={{ color: isHoveredButton2 ? '#95ffd4' : 'white' }}
                             onMouseEnter={() => setIsHoveredButton2(true)}
                             onMouseLeave={() => setIsHoveredButton2(false)}
-                            size={35} />
+                            size={isHoveredButton2 ? 45 : 35} />
                     </a>
                 </li>
                 <li>
@@ -30,7 +31,7 @@ const Rodape = () => {
                         <AiFillInstagram style={{ color: isHoveredButton3 ? '#95ffd4' : 'white' }}
                             onMouseEnter={() => setIsHoveredButton3(true)}
                             onMouseLeave={() => setIsHoveredButton3(false)}
-                            size={35} />
+                            size={isHoveredButton3 ? 45 : 35} />
                     </a>
                 </li>
             </ul>
